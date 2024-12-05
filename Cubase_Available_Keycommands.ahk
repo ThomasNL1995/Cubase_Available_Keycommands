@@ -114,8 +114,8 @@ LoadKeybindXML(*) {
     }
     
     doc := loadXML(KeyCommandsXmlData)
-    nodesPerCategory := doc.SelectNodes("//KeyCommands/list[@name='Categories']/item")
-
+    nodesPerCategory := doc.SelectNodes("//list[@name='Categories']/item")
+    
     ; PARSE KEY COMMMANDS XML DATA
     for categoryNode in nodesPerCategory {
         nodes := categoryNode.selectNodes(".//item[string[@name='Name'] and not(list)]")
